@@ -2,25 +2,37 @@
 
 **All notable changes to this project will be documented in this file.**
 
-## [5.0] - Upcoming
+## [6.0] - 2/10/2025
 
 ### Added
 
-- XRLab Github Repository and personal.
-- Documentation of significant updates.
+- Add avatar lips sincronization.
+- Notifications for interaction or instructions as objetives, aids for user movement as Zelda Wind Waker pop ups.
+- Avatars animations.
+- Chat box to review and confirm comments from avatars and user.
 - Exploration of Oculus Lip Sync.
-- Settings Panel.
-- API Tokens on settings panel.
-- Volume Settings Panel.
-- Chat box implemented to review and confirm comments from avatars and user.
-- Different avatars.
-- How to move with the joysticks and interact with avatars.
 
+### Fixed
+
+### Removed
+
+## [5.0] - 2/10/2025
+
+### Added
+
+- XRLab Github Repository and personal. ✅
+- Documentation of significant updates. ✅
+- Settings Panel.✅
+    - Volume Settings Panel.✅
+    - Script pending.
+- Different avatars and personalities. ✅
+- How to move with the joysticks and interact with avatars.
+- Add repeat button working. ✅ 
 
 ### Fixed
 - Calibration device floating.
 - Cast Meta Quest 3 on demo.
-- Check total time for responding, delay.
+- Check total time for responding, delay. ✅
 - Enough close avatar will notify you.
 - Indicator for avatar chat close.
 - Voice is only hearing on left side.
