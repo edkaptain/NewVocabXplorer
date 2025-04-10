@@ -2,19 +2,33 @@
 
 **All notable changes to this project will be documented in this file.**
 
-## [6.0] - 2/10/2025
+## [6.0] - 2/17/2025
 
-### Added
+### Completed Features
 
-- Add avatar lips sincronization.
-- Notifications for interaction or instructions as objetives, aids for user movement as Zelda Wind Waker pop ups.
-- Avatars animations.
-- Chat box to review and confirm comments from avatars and user.
-- Exploration of Oculus Lip Sync.
+- Add avatar lips sincronization.✅
+- Avatars animations.✅
+- Check total time for responding, delay.✅ 15.23s
 
-### Fixed
+### Work In Progress
 
-### Removed
+- Notifications for interaction or instructions as objetives, aids for user movement. ❌
+- Chat box to review comments from avatars and user.❌
+- Improve time response for avatars. ❌
+
+### Bug Fixes
+- Enough close avatar will notify you.❌
+- Indicator for avatar chat close.❌
+- User floats during game session.❌
+- Settings Panel.❌
+    - Volume Settings Panel. ❌
+    - Script pending. ❌
+    - Chat Session Timeout Settings. ❌
+- How to move with the joysticks and interact with avatars.
+- Voice is only hearing on left side. ✅
+- White dot eliminate. ✅
+
+- Add repeat button working. ✅
 
 ## [5.0] - 2/10/2025
 
@@ -22,22 +36,11 @@
 
 - XRLab Github Repository and personal. ✅
 - Documentation of significant updates. ✅
-- Settings Panel.✅
-    - Volume Settings Panel.✅
-    - Script pending.
-- Different avatars and personalities. ✅
-- How to move with the joysticks and interact with avatars.
-- Add repeat button working. ✅ 
 
 ### Fixed
-- Calibration device floating.
-- Cast Meta Quest 3 on demo.
-- Check total time for responding, delay. ✅
-- Enough close avatar will notify you.
-- Indicator for avatar chat close.
-- Voice is only hearing on left side.
-- White dot eliminate.
-- Evidence videos and images.
+
+- Cast Meta Quest 3 on demo. ✅
+- Evidence videos. ✅
 
 ### Removed
 
@@ -61,7 +64,7 @@
 - Microphone button implemented.
 - Repeat option.
 - Cancel option.
-- Introduced talking with avatars by VR Radual Menu.
+- Introduced talking with avatars by VR Radial Menu.
 
 ### Fixed
 
