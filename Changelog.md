@@ -9,12 +9,13 @@
 - Add avatar lips sincronization.✅
 - Avatars animations.✅
 - Check total time for responding, delay.✅ 15.23s
+- Chat box to review comments from avatars and user.✅
 
 ### Work In Progress
 
 - Notifications for interaction or instructions as objetives, aids for user movement. ❌
-- Chat box to review comments from avatars and user.❌
 - Improve time response for avatars. ❌
+- Push the current version to a new branch on GitHub. ❌
 
 ### Bug Fixes
 - Enough close avatar will notify you.❌
@@ -24,11 +25,12 @@
     - Volume Settings Panel. ❌
     - Script pending. ❌
     - Chat Session Timeout Settings. ❌
-- How to move with the joysticks and interact with avatars.
+- How to move with the joysticks and interact with avatars. ❌
 - Voice is only hearing on left side. ✅
 - White dot eliminate. ✅
-
 - Add repeat button working. ✅
+- Fix animation in "X" cancel button. ❌
+- Fix audio problem with avatar when starts conversation. ✅
 
 ## [5.0] - 2/10/2025
 

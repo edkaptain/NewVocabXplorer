@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Subdomain: vocabxplorer
   AppId: 675914b77e270c9cb513a099
-  EnableLogging: 1
+  EnableLogging: 0
   EnableAnalytics: 1
   BodyType: 1

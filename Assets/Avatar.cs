@@ -19,42 +19,37 @@ public class Avatar : MonoBehaviour
     [SerializeField] private string avatarName;
     [SerializeField] private int avatarAge;
     [SerializeField, TextArea(2, 3)] private string avatarActitude;
-    [SerializeField] private TextAsset avatarMetaPrompt;
+    [SerializeField] private TextAsset avatarMetaPrompt; //Pending
 
     [Header("Voice Configuration")]
     private ElevenLabsConfiguration configuration;
     [SerializeField] private Voice voice;
-    private AudioSource audioSource;
+    [SerializeField] private AudioSource audioSource;
 
     [Header("Debug Info")]
-    [SerializeField] private bool isNear;
     [SerializeField] private GameObject chatWait;
-    private bool debug = true;
+    [SerializeField] private GameObject ChatGPTCanvas;
     private string response;
     private bool isRecording;
     [SerializeField, Range(2, 10)] private int duration = 10;
-    private float time;
     private AudioClip clip;
-    private object openai;
     private readonly string fileName = "output.wav";
     private OpenAIApi openAI = new OpenAIApi();
 
     private List<ChatMessage> messages = new List<ChatMessage>();
-
+    private AudioClip audioClip;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
         if (!Permission.HasUserAuthorizedPermission(Permission.Microphone))
-            Permission.RequestUserPermission(Permission.Microphone);
-        audioSource = GetComponent<AudioSource>();
+            Permission.RequestUserPermission(Permission.Microphone);        
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            isNear = true;
             NotificationsManager.Instance.isOnAvatar = true;
             NotificationsManager.Instance.NotifyPopUpNotification(true);
         }
@@ -64,8 +59,6 @@ public class Avatar : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            isNear = false;
-
             NotificationsManager.Instance.isOnAvatar = false;
             NotificationsManager.Instance.NotifyPopUpNotification(false);
         }
@@ -74,19 +67,29 @@ public class Avatar : MonoBehaviour
 
     public async void Actions(int idAction)
     {
-
         switch (idAction)
         {
-            case 0:
-                if (isNear && NotificationsManager.Instance.isOnAvatar)
+            case 0: // Voice input button
+                if (NotificationsManager.Instance.isOnAvatar)
                 {
                     StartToTalk();
                 }
                 else if (!NotificationsManager.Instance.isOnAvatar)
                 {
                     Debug.Log("Error");
-                    audioSource.PlayOneShot(Resources.Load<AudioClip>("Error"));
+                    NotificationsManager.Instance.PlayAudioClipNotification("Error");
                 }
+                break;
+            
+            case 1: // Retry button
+                if (NotificationsManager.Instance.isOnAvatar)
+                {
+                    audioSource.PlayOneShot(audioClip);
+                }
+                break;
+
+            case 3: // Cancel button
+               
                 break;
             default:
                 Debug.LogWarning("No valid");
@@ -94,13 +97,17 @@ public class Avatar : MonoBehaviour
 
         }
     }
+    /// <summary>
+    /// This method enables the voice input process with  an avatar.
+    /// </summary>
     public async void StartToTalk()
     {
+        NotificationsManager.Instance.NotifyOnTimeDuration(true);
         //Voice Input Text
-        audioSource.PlayOneShot(Resources.Load<AudioClip>("notification"));
+        NotificationsManager.Instance.PlayAudioClipNotification("notification");
         await GeneratePrompt(await StartRecording());
         PlayMessage(response);
-
+        NotificationsManager.Instance.NotifyOnTimeDuration(false);
     }
 
     private async Task<String> StartRecording()
@@ -129,7 +136,7 @@ public class Avatar : MonoBehaviour
         chatWait.GetComponent<Animator>().SetBool("status", true);
         Microphone.End(null);
 
-        audioSource.PlayOneShot(Resources.Load<AudioClip>("notification"));
+        NotificationsManager.Instance.PlayAudioClipNotification("notification");
 
         byte[] data = SaveWav.Save(fileName, clip);
 
@@ -161,6 +168,8 @@ public class Avatar : MonoBehaviour
 
         if (messages.Count == 0) newMessage.Content = "\n" + newMessage.Content;
 
+        ChatGPTCanvas.GetComponent<ChatGPTcontroller>().AppendMessage(newMessage);
+
         Debug.Log("Message: " + messages.Count.ToString() + " " + newMessage.Content);
         messages.Add(newMessage);
 
@@ -175,6 +184,7 @@ public class Avatar : MonoBehaviour
             var message = completionResponse.Choices[0].Message;
             response = message.Content?.Trim() ?? "No response received.";
             Debug.Log("Response: " + response);
+            ChatGPTCanvas.GetComponent<ChatGPTcontroller>().AppendMessage(message);
         }
         else
         {
@@ -207,12 +217,12 @@ public class Avatar : MonoBehaviour
 
             var request = new TextToSpeechRequest(voice, message, model: Model.FlashV2_5, outputFormat: OutputFormat.PCM_24000);
             var stopwatch = Stopwatch.StartNew();
-            var voiceClip = await api.TextToSpeechEndpoint.TextToSpeechAsync(request, cancellationToken: destroyCancellationToken);
+            audioClip = await api.TextToSpeechEndpoint.TextToSpeechAsync(request, cancellationToken: destroyCancellationToken);
             var elapsedTime = (float)stopwatch.Elapsed.TotalSeconds;
-            var playbackTime = voiceClip.Length - elapsedTime;
-
-            await Task.Delay(TimeSpan.FromSeconds(playbackTime + 1f), destroyCancellationToken);
-            audioSource.PlayOneShot(voiceClip);
+            //var playbackTime = audioClip.length - elapsedTime;
+            audioSource.clip = audioClip; 
+            //await Task.Delay(TimeSpan.FromSeconds(playbackTime + 1f), destroyCancellationToken);            
+            audioSource.Play();
         }
         catch (Exception e)
         {
