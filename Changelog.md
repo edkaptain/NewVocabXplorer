@@ -1,5 +1,5 @@
 # Changelog
-
+# Avatar-LipsSync Branch
 **All notable changes to this project will be documented in this file.**
 
 ## [6.0] - 2/17/2025
@@ -10,26 +10,26 @@
 - Avatars animations.✅
 - Check total time for responding, delay.✅ 15.23s
 - Chat box to review comments from avatars and user.✅
+- Push the current version to a new branch on GitHub. ✅
 
 ### Work In Progress
 
 - Notifications for interaction or instructions as objetives, aids for user movement. ❌
+- Enough close avatar will notify you.❌
 - Improve time response for avatars. ❌
-- Push the current version to a new branch on GitHub. ❌
 
 ### Bug Fixes
-- Enough close avatar will notify you.❌
-- Indicator for avatar chat close.❌
+
 - User floats during game session.❌
 - Settings Panel.❌
     - Volume Settings Panel. ❌
     - Script pending. ❌
     - Chat Session Timeout Settings. ❌
 - How to move with the joysticks and interact with avatars. ❌
+- Fix animation in "X" cancel button. ❌
 - Voice is only hearing on left side. ✅
 - White dot eliminate. ✅
 - Add repeat button working. ✅
-- Fix animation in "X" cancel button. ❌
 - Fix audio problem with avatar when starts conversation. ✅
 
 ## [5.0] - 2/10/2025
