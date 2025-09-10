@@ -13,7 +13,7 @@ public class RadialSelection : MonoBehaviour
     public Transform radialPartCanvas;
     public float angleBetweenRadials;
 
-    public  UnityEvent<int> OnPartSelected;
+    public UnityEvent<int> OnPartSelected;
 
     public Transform handTransform;
     int currentSelectedRadialPart = -1;

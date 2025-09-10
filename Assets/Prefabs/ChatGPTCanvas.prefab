@@ -616,6 +616,9 @@ MonoBehaviour:
   progressBar: {fileID: 1055397621498989078}
   message: {fileID: 2333220320812104556}
   dropdown: {fileID: 71921256173194660}
+  scroll: {fileID: 0}
+  sent: {fileID: 0}
+  received: {fileID: 0}
 --- !u!82 &2872836077613220496
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2050,7 +2053,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 9.351, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1.277, y: 1.231}
+  m_AnchoredPosition: {x: 1.2769775, y: 1.2309875}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &6324821148195665364

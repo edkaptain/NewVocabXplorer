@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Samples/OpenAI Unity/0.2.2/Whisper/Whisper Sample.unity
     guid: 8f47e0e7c9e717a4ab6e6faa20ebb0e0
   - enabled: 1
-    path: Assets/Scenes/Playground.unity
+    path: Assets/Scenes/Forest.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 88c72f105e3eb16488da68c97c8be4d1, type: 2}
