@@ -130,7 +130,7 @@ public class Avatar2 : MonoBehaviour
         var completionResponse = await openAI.CreateChatCompletion(new CreateChatCompletionRequest()
         {
             //Model = "gpt-4o",
-            Model = "o4-mini",
+            Model = "gpt-4o",
             Messages = messages
         });
 
