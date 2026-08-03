@@ -1,0 +1,23 @@
+# ninja log v5
+0	2665	8074369808590800	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	11920d47e653e00c
+99	711	8074369789003082	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	f3a5ce0f18b34882
+12	2293	8074369804846883	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	d04be52688035838
+69	2222	8074369804136217	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	a7a6ae29de64868d
+713	1131	8074369792965475	C:/Users/Eduardo/Desktop/Avatarlingua Backup/AvatarLingua/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2y2e39g3/obj/arm64-v8a/libswappywrapper.so	7120847b91b12d02
+43	2156	8074369803462431	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	cbb09500cf8a4c4
+56	2164	8074369803489566	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	ef84d3d400c8ed81
+84	2501	8074369806967157	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	3db67baa393ab46b
+22	2201	8074369803911659	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	fdf0fcbb1f06a0ae
+31	2547	8074369807410369	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	8ea8c59e5e066508
+2666	2804	8074369809953881	C:/Users/Eduardo/Desktop/Avatarlingua Backup/AvatarLingua/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2y2e39g3/obj/arm64-v8a/libgame.so	b28dd322c556e793
+130	445	8074372811348295	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	f3a5ce0f18b34882
+446	698	8074372813689954	C:/Users/Eduardo/Desktop/Avatarlingua Backup/AvatarLingua/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2y2e39g3/obj/arm64-v8a/libswappywrapper.so	7120847b91b12d02
+33	1537	8074372822257560	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	cbb09500cf8a4c4
+68	1569	8074372822590319	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	ef84d3d400c8ed81
+10	1588	8074372822787445	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	fdf0fcbb1f06a0ae
+20	1653	8074372823407352	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	d04be52688035838
+99	1669	8074372823573150	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	a7a6ae29de64868d
+113	1762	8074372824550688	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	3db67baa393ab46b
+54	1916	8074372826070306	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	8ea8c59e5e066508
+43	2035	8074372827220698	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	11920d47e653e00c
+2035	2193	8074372828808261	C:/Users/Eduardo/Desktop/Avatarlingua Backup/AvatarLingua/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2y2e39g3/obj/arm64-v8a/libgame.so	b28dd322c556e793
